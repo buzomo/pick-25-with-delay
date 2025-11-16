@@ -42,7 +42,7 @@
         <div class="line-count" id="lineCount">0行</div>
     </div>
     <br>
-    <button id="openRandomUrl">2.5秒遅延させながら25個開く</button>
+    <button id="openRandomUrl">1.5秒遅延させながら50個開く</button>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const textarea = document.getElementById('urlList');
@@ -78,7 +78,7 @@
                 }
 
                 // 25個または残っているURLの数だけ開く
-                const openCount = Math.min(25, urls.length);
+                const openCount = Math.min(50, urls.length);
 
                 // 0.25秒遅延させながらURLを開く
                 for (let i = 0; i < openCount; i++) {
@@ -92,7 +92,7 @@
                             updateLineCount();
                             localStorage.setItem('savedUrls', textarea.value);
                         }
-                    }, 2500 * i); // 0.25秒遅延
+                    }, 1500 * i);
                 }
             });
         });
