@@ -42,7 +42,7 @@
         <div class="line-count" id="lineCount">0行</div>
     </div>
     <br>
-    <button id="openRandomUrl">0.25秒遅延させながら25個開く</button>
+    <button id="openRandomUrl">2.5秒遅延させながら25個開く</button>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const textarea = document.getElementById('urlList');
@@ -92,7 +92,7 @@
                             updateLineCount();
                             localStorage.setItem('savedUrls', textarea.value);
                         }
-                    }, 250 * i); // 0.25秒遅延
+                    }, 2500 * i); // 0.25秒遅延
                 }
             });
         });
